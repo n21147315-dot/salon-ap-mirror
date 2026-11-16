@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F4F2ED'/%3E%3Cpath d='M2 24 L12 12 L20 20 L30 8 V26 H2Z' fill='%23131313'/%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%237A4BE0' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="description" content="Салон АП — санаторий для внимания: интеллектуальные сезоны из книг, фильмов, спектаклей, лекций и выставок." />
+    <title>Салон АП — санаторий для внимания</title>
+    <!-- OG (L-8): превью ссылки в Telegram/соцсетях. og:image — абсолютный URL,
+         картинка из public/assets (кэш бессрочный: смена картинки = новое имя файла) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Салон АП" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:url" content="https://salonap.art/" />
+    <meta property="og:title" content="Салон АП — санаторий для внимания" />
+    <meta property="og:description" content="Сезоны вокруг одной темы: книги, спектакли, фильмы и обсуждения. Собираем подборки произведений и событий, чтобы застраховать вас от темпоритмических и прочих видов пыток." />
+    <meta property="og:image" content="https://salonap.art/assets/og-cover-2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Салон АП — санаторий для внимания" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Тема из ссылки (?style=v1..v10) — до первой отрисовки, чтобы не мигало
+      try {
+        var s = new URLSearchParams(location.search).get('style')
+        if (s && /^v(?:[1-9]|10)$/.test(s)) document.documentElement.setAttribute('data-style', s)
+      } catch (e) {}
+    </script>
+    <script>
+      // Яндекс.Метрика. Номер приходит из .env (VITE_YM_ID, подстановка при сборке):
+      // на тестовом стенде он пуст — счётчик не ставится и тесты не пишутся в прод-статистику.
+      (function () {
+        try {
+          var id = '113482270'
+          if (!/^\d+$/.test(id)) return
+          ;(function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) }
+            m[i].l = 1 * new Date()
+            for (var j = 0; j < e.scripts.length; j++) { if (e.scripts[j].src === r) return }
+            k = e.createElement(t)
+            a = e.getElementsByTagName(t)[0]
+            k.async = 1
+            k.src = r
+            a.parentNode.insertBefore(k, a)
+          })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js', 'ym')
+          ym(Number(id), 'init', { clickmap: true, trackLinks: true, accurateTrackBounce: true, webvisor: true })
+        } catch (err) {}
+      })()
+    </script>
+    <!-- preload шрифтов дефолтной темы (Montserrat 900 — плакатные заголовки,
+         Manrope 400/600 — текст): раньше предзагружались шрифты экспериментальных
+         тем v1/v2, и Montserrat на первом рендере давал FOUT -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/montserrat-cyrillic-900-normal.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/manrope-cyrillic-400-normal.woff2" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/manrope-cyrillic-600-normal.woff2" />
+  <script type="module" crossorigin src="/assets/index-BXRw7VIx.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/react-C8w-UNLI.js">
+  <link rel="modulepreload" crossorigin href="/assets/supabase-DXeGmUyu.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-CdQmaZ82.css">
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

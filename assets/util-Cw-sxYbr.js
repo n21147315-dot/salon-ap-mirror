@@ -1,0 +1,1 @@
+function a(t,n){const e=t%10,r=t%100;return e===1&&r!==11?n[0]:e>=2&&e<=4&&(r<12||r>14)?n[1]:n[2]}function u(t){return t.trim().split(/\s+/).slice(-1)[0]??t}function i(t){return t?new Date(t+"T00:00:00").toLocaleDateString("ru-RU",{day:"numeric",month:"long"}):""}export{i as f,u as l,a as p};
